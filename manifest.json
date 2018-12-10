@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Do You Like",
+  "version": "1.0",
+  "description": "Do You Like ...?",
+  "permissions": [
+    "http://*/",
+    "https://*/",
+    "tabs"
+  ],
+  "web_accessible_resources":[
+    "right.png",
+    "left.png"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "custom-elements.min.js",
+        "do_you_like.js"
+      ]
+    }
+  ]
+}
